@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular Elastic Grid</title>
+  <link rel="stylesheet" href="css/angular-elastic-grid.css">
+</head>
+<body ng-app="angular-elastic-grid">
+  <div>
+    <p style="text-align: center">
+      This is a test
+    </p>
+    <elastic-grid items="[{
+    title: 'Title 1',
+    description: 'This is a description.',
+    thumbnail: ['https://placehold.it/350x150'],
+    large: ['https://placehold.it/450x350', 'https://placehold.it/450x350', 'https://placehold.it/450x350'],
+    button_list: [
+    { title: 'Demo', url: 'http://#', new_window: '_blank' },
+    { title: 'Download', url: 'http://#', new_window: '_blank' }
+    ],
+    tags: ['Test']
+  }]" direction=true speed=500 height=500 delay=0 inverse=false>
+</elastic-grid>
+</div>
+
+<script type="text/javascript" src="../bower/angular/angular.js"></script>
+<script type="text/javascript" src="../bower/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../bower/jquery-elastic-grid/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="../bower/jquery-elastic-grid/js/classie.js"></script>
+<script type="text/javascript" src="../bower/jquery-elastic-grid/js/elastic_grid.js"></script>
+<script type="text/javascript" src="../bower/jquery-elastic-grid/js/jquery.elastislide.js"></script>
+<script type="text/javascript" src="../bower/jquery-elastic-grid/js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="../bower/jquery-elastic-grid/js/elastic_grid.encode.js"></script>
+
+<script type="text/javascript" src="js/angular-elastic-grid.min.js"></script>
+</body>
+</html>
