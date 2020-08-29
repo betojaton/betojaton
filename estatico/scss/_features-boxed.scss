@@ -1,0 +1,39 @@
+.features-boxed {
+	.card {
+		background-color: transparent;
+		text-align: center;
+		height: 100%;
+		border-width: 0;
+		padding: 0;
+		overflow: hidden;
+			/* &:hover .icon, &:hover i {
+				background-color: $secondary-dark;
+				color: $secondary-light;
+			}
+			&:hover .card-title {
+				color: $secondary-dark;
+			} */
+			.icon {
+				font-size: 54px;
+				width: 52px;
+				margin: 20px auto 10px;
+				overflow: hidden;
+				border-top-left-radius: 2rem ;
+				border-bottom-right-radius: 2rem;
+				padding: 0.5rem;
+				transition: all 500ms;
+			}
+			.card-body {
+				.card-title {
+					font-size: 1.2rem;
+					margin-bottom: 8px;
+					margin-top: 0;
+					padding-bottom: 1rem;
+				}
+				.card-text {
+					margin-top: 15px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}

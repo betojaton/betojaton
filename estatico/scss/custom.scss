@@ -1,0 +1,472 @@
+
+//Theme Custom
+/* Colores*/
+$primary: #2AD1C9;
+$primary-light:#70FFFC;
+$primary-dark:#009F98;
+$secondary: #192734;
+$secondary-light: #404E5D;
+$secondary-dark: #00000C;
+$success: #FF8E33;
+$success-light: #FFE3CC;
+$success-dark: #940;
+
+$body-bg: $secondary-light;
+
+/*Fuentes*/
+$font-family-sans-serif: 'Roboto', Arial, sans-serif;
+$font-family-serif: 'Roboto Slab', Times, serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 300;
+$headings-color: $primary;
+
+
+/*==============================
+=     IMPORTS 
+Potfolio: filterable-gallery 
+SobreMi: skill-bars, time-line, testimonial-slider 
+ServiciosS: features-boxed
+Blog: -      =
+===============================*/
+@import "../bootstrap/scss/bootstrap";
+@import 'liquid-slider', 'bg-animated', 'off-canvas-sidebar-drawer-navbar', 'animated-type-heading', 'skill-bars', 'time-line', 'testimonial-slider', 'features-boxed', 'filterable-gallery';
+/*=====  End of IMPORTS  ======*/
+
+
+
+
+/*RESET*/
+html {	scroll-behavior: smooth;}
+body {	overflow-x:hidden;}
+p {
+	line-height: calc(1ex / 0.32); //altura de línea óptima para las fuentes serif y sans-serif
+	margin: calc(1ex / 0.32) 0;
+	width: 60ch; //ajusta a 60 caracteres por línea
+	max-width: 100%;
+	font-size: 1.2em;
+}
+p[lang=”en”] {
+	text-align: justify;
+	hyphens: auto;
+}
+h1, h2, h3, h4, h5 {
+	margin: 2.75rem 0 1.05rem;
+	font-family: $font-family-serif;
+	font-weight: 500;
+	line-height: 1.15;
+}
+h1 {
+	margin-top: 0;
+	font-size: 5.653em;
+}
+h2 {font-size: 3.998em;}
+h3 {font-size: 2.827em;}
+h4 {font-size: 1.999em;}
+h5 {font-size: 1.414em;}
+
+small, .small {font-size: 0.707em;}
+
+h2,h3,h4,h5 {
+	font-family: $font-family-serif;
+	color: $primary;
+	font-weight: $headings-font-weight;
+	letter-spacing: .032em;
+}
+body {
+	background-color: $secondary-light;
+	font-family: $font-family-sans-serif;
+	color: $success-light;
+	line-height: 160%;
+	font-weight: 300;
+}
+article {
+	h1 {
+		line-height: calc(1ex / 0.42);
+		margin: calc(1ex / 0.42) 0;
+	}
+	h2 {
+		line-height: calc(1ex / 0.42);
+		margin: calc(1ex / 0.42) 0;
+	}
+	h3 {
+		line-height: calc(1ex / 0.38);
+		margin: calc(1ex / 0.38) 0;
+	}
+}
+.btn { 
+	font-family: $font-family-serif;
+	font-weight: 400;
+}
+.card {
+	background-color: $secondary-light;
+}
+.btn.focus, .btn:focus {
+	box-shadow: none;
+}
+
+/*===============================
+=            PRELOAD            =
+===============================*/
+#preload {
+	z-index: 9999;
+	top: 0;
+	#porcentajeCarga {
+		top: 52%;
+	}
+	#lineaCarga {
+		height: 2px;
+		top: 50%;
+		left: 0%;
+		#rellenoCarga {
+			top: 0;
+			left: 0;
+			height: 2px;
+			width: 0%;
+		}
+	}
+	#estadoCarga {
+		background: url(../img/loader.gif);
+		top: 45%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 50px;
+		height: 50px;
+	}
+}
+
+/*=====  End of PRELOAD  ======*/
+
+
+/*===============================
+=            SIDEBAR            =
+===============================*/
+
+/*----------  NAVBAR PPAL  ----------*/
+.navbar-ppal {
+	a.nav-link {
+		color: $primary !important;
+		font-family: $font-family-serif;
+		position: relative;
+		&:hover, &.ls-current {
+			background-color: $secondary;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			margin-left: 10px;
+			text-align: center; 
+		}
+	}
+	.navbar-nav {
+		a { color: $secondary-light;}
+	}
+	.nav-tabs .nav-link.active {
+		color: $primary;
+		font-family: $font-family-serif;
+		background-color: transparent;
+		border-bottom: 2px solid $secondary-light;
+	}
+	.navbar-social {
+		i {
+			font-size: 24px;
+		}
+	}
+}
+/*----------  /NAVBAR PPAL  ----------*/
+
+
+.off-canvas {
+	.btn-close {
+		height: 38px;
+		position: absolute;
+		right: 0;
+		.icon {
+			color: $secondary;
+		}
+	}
+	.navbar-brand { 
+		position: absolute;
+		background-image: url("../img/logo-betojaton.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: left center;
+		width: 32px;
+		height: 32px;
+		left: 282px;
+		top: 60px;
+		transition: all 300ms; 
+		&:hover  {
+			width: 104px;
+		}
+	}
+	&.open {
+		.navbar-brand  {
+			width: 104px;
+			left: 84px;
+			/* transition: all 300ms; */
+		}
+	}
+	.bg-skew {
+		background-color: $secondary;
+		position: absolute;
+		z-index: -9;
+		width: 100%;
+		height: 100vh;
+		top: 20%;
+		left: -10px;
+		-moz-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-webkit-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-o-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-ms-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		transform: translate(0px,-40%) skew(-45deg, 0deg);
+	} 
+}
+footer {
+	color: $primary;
+	p span::after {
+		content: '_____________________';
+		position: relative;
+		left: 0;
+	}
+}
+/*=====  End of SIDEBAR  ======*/
+
+/*=========================================
+=            CONTENT SECCION          =
+=========================================*/
+#main {
+	background-image: url("../img/bg-foto-icons01.png");
+	background-position: bottom right;
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+section {
+	background-color: rgba($secondary-light, 0.8);
+	margin-bottom: 5rem;
+	min-height: 100vh;
+	header {
+		margin-bottom: 3rem ;
+		h2 {
+			font-size: 1.186rem;
+			border-bottom: 1px solid $secondary-dark;
+			position:relative;
+			padding-bottom: 30px;
+			letter-spacing: 10px;
+			text-transform: uppercase;
+			font-weight: 900;
+			span {
+				position: absolute;
+				bottom: -16px;
+				left: 47%;
+				background-color: $secondary-light;
+				background-image: url('../img/bg-iso-title.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				font-size: 16px;
+				font-weight: 900;
+				line-height: 34px;
+				color: $secondary-light;
+				width: 28px;
+				text-align: center;
+				padding-left: 8px;
+				border-left: 10px solid $secondary-light;
+				border-right: 10px solid $secondary-light;
+				box-sizing: content-box;
+			}
+		}
+		.lead {
+			line-height: 1.5;
+			letter-spacing: .2em;
+			font-size: 1rem;
+		}
+
+	}
+	/*----------  INICIO  ----------*/
+	&#inicio {
+		background-color: transparent;
+		margin-bottom: 0;
+		.more-about {
+			position: absolute;
+			top: 80%;
+		} 
+		.container {
+			height: 100vh;
+		}
+	}
+	/*----------  /INICIO  ----------*/
+
+	/*----------  PORTFOLIO  ----------*/
+	&#portfolio {
+		/* .nav-filter a {
+			transform: skewX(-45deg);
+			span {
+				transform: skewX(45deg);
+			}
+		} */
+	}
+	/*----------  /PORTFOLIO  ----------*/
+
+	/*----------  SOBRE-MI  ----------*/
+	&#sobre-mi {
+		.foto-bj {
+			clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+		}
+	}
+	/*----------  /SOBRE-MI  ----------*/
+
+	/*----------  SERVICIOS  ----------*/
+	&#servicios {
+		.hvr-rectangle-out {	
+			background-color: transparent;
+
+		}
+		.hvr-rectangle-out:before  {
+			background-color: $secondary;
+		}
+	}
+	/*----------  /SERVICIOS  ----------*/
+
+	/*----------  BLOG  ----------*/
+	&#blog {
+
+	}
+	/*----------  /BLOG  ----------*/
+
+}
+/*=====  End of CONTENT SECCION  ======*/
+
+/*==============================
+=            FOOTER            =
+==============================*/
+footer {
+	color: $secondary-dark;
+}
+
+
+/*=====  End of FOOTER  ======*/
+/*----------  MISC  ----------*/
+.skew { clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);}
+.border-top-left {
+	border-top-left-radius: 2rem ;
+	border-bottom-right-radius: 2rem;
+}
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.tooltip-inner {
+	background:$secondary;
+	font-size: 12px;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+	border-right-color:$secondary !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+	border-left-color:$secondary !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+	border-bottom-color:$secondary !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+	border-top-color:$secondary !important;
+}
+
+/*----------  RIBBON  ----------*/
+.box {
+	width: 200px; 
+	height: 300px;
+	position: absolute;
+	top: 1%;
+	right: 1%;
+}
+.ribbon {
+	position: absolute;
+	right: -5px; top: -5px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px; height: 75px;
+	text-align: right;
+}
+.ribbon span {
+	font-size: 9px;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 100px;
+	display: block;
+	background: #79A70A;
+	background: linear-gradient(#F70505 0%, #8F0808 100%);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+	position: absolute;
+	top: 19px; right: -21px;
+}
+.ribbon span::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #8F0808;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #8F0808;
+}
+.ribbon span::after {
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #8F0808;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #8F0808;
+}
+/*======================================
+=            MEDIAS QUERIES            =
+======================================*/
+/*----------  XS  ----------*/
+@media (max-width: 320px) {
+	#main {
+		background-image: url("../img/bg-foto-icons01_sm.png");
+	}
+	.fixed-top {
+		position: absolute;	
+	}
+	h2.cd-headline {
+		font-size: 300%;
+		letter-spacing: 0;
+	}
+
+}
+
+/*----------  SM  ----------*/
+@media (max-width: 576px) {
+
+}
+
+/*----------  MD  ----------*/
+@media (max-width: 767px) {
+}
+
+/*----------  LG  ----------*/
+@media (min-width: 992px) {
+	.lead {
+		width: 75%;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.navbar.off-canvas[data-open-drawer="1"], .navbar.off-canvas.open {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+
+}
