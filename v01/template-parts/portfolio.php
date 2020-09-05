@@ -7,7 +7,7 @@
         =            GALLERY PORTFOLIO            =
         ========================================-->
         <div class="col-12 pl-md-5">
-        	<div class="filtr-controls btn-group nav-filter mb-3 w-100 mx-auto">
+        	<div class="filtr-controls btn-group nav-filter mb-3 w-100 mx-auto d-sm-inline-block">
         		<span class="nav-item btn btn-secondary px-3 active" data-filter="all">Todos</span>
         		<span class="nav-item btn btn-secondary px-3" data-filter="1">Diseño Gráfico</span>
         		<span class="nav-item btn btn-secondary px-3" data-filter="2">Diseño Web</span>
@@ -85,27 +85,4 @@
         </div>
         <!--====  End of GALLERY PORTFOLIO  ====-->
 
-
-        <div class="modal fade" id="modal-apk">
-        	<div class="modal-dialog" role="document">
-        		<div class="modal-content">
-        			<div class="modal-header">
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        					<span aria-hidden="true">&times;</span>
-        					<span class="sr-only">Cerrar</span>
-        				</button>
-        				<h4 class="modal-title">Diseño web y maquetado | ONG</h4>
-        				<ul class="list-inline">
-        					<li><i class="fas fa-tags"></i> Categoría:<br><span>Diseño Web</span></li>
-        					<li><i class="fas fa-user-tie"></i>Cliente:<br><span>22.5mm</span></li>
-        					<li><i class="fas fa-link"></i>URL sitio:<br><a href="http://apukuntur-ong.com.ar" target="_blank">Visite el sitio</a></li>
-        				</ul>
-        			</div>
-        			<div class="modal-body">
-        				<p>Como encargado del area de comunicacíon de la ONG, estoy a cargo del armado y diseño integral de la imagen de la marca, el sitio web, la imagen en redes sociales y todo lo que refiere a la comunicación visual.</p>
-        				<img src="img/portfolio/web-apk-mockup02.jpg" alt="" class="img-fluid" style="max-width: 250px;">
-        			</div>
-        		</div><!-- /.modal-dialog -->
-        	</div><!-- /.modal -->
-
-        </div>
+    </div>

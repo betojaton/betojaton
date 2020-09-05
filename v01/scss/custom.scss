@@ -36,8 +36,6 @@ Blog: -
 /*=====  End of IMPORTS  ======*/
 
 
-
-
 /*RESET*/
 html {	scroll-behavior: smooth;}
 body {	overflow:hidden;}
@@ -285,6 +283,15 @@ footer {
 		} 
 	}
 }
+/*----------  Deshabilito el alto de las secciones  ----------*/
+@media (max-width: 640px) {
+	.fp-tableCell, .fp-section, .fp-slides {
+		height: auto !important;
+	}
+	.fp-slides {
+		overflow: visible !important;
+	}
+}
 
 /*=====  End of Clases FULLPAGE  ======*/
 
@@ -298,6 +305,9 @@ section#inicio {
 	background-size: contain;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	h2.cd-headline {
+		text-shadow: 0 2px 10px $secondary-dark;
+	}
 	.more-about {
 		position: absolute;
 		top: 80%;
@@ -314,7 +324,7 @@ section {
 	/*----------  SLIDERs  ----------*/
 	.slide {
 		padding: 3em 0;
-		height: 110vh;
+		/* height: 110vh; */
 		header {
 			margin-bottom: 3rem ;
 			h2 {
@@ -414,7 +424,14 @@ footer {
 /*======================================
 =            MEDIAS QUERIES            =
 ======================================*/
-
+@/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.btn-group{
+		display: inline-block;
+	}
+}
 /*=============================================
 MOVIL VERTICAL (revisamos en 320px)
 =============================================*/
@@ -434,6 +451,7 @@ MOVIL VERTICAL (revisamos en 320px)
 		font-size: 300%;
 		letter-spacing: 0;
 	}
+	
 }
 
 /*----------  SM  ----------*/

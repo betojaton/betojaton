@@ -7,7 +7,7 @@
     </header>
     <div class="row pt-lg-5 mb-5">
         <article class="col col-sm-11 col-md-8 mx-md-auto">
-            <img src="img/foto-betojaton.png" alt="" style="shape-outside: circle(50%);" class="float-left mr-3 mb-3 rounded-circle foto-bj">
+            <img src="img/foto-betojaton.png" alt="" style="shape-outside: circle(50%);" class="float-left mr-3 mx-sm-5 mb-3 rounded-circle foto-bj">
             <p class="text-center"><strong>Mi nombre es Roberto</strong> y he tenido la oportunidad de trabajar para pequeñas y grandes empresas, instituciones, ONG, diarios, etc.</p>
 
             <p>Como <strong>Front-End</strong> tuve la experiencia de colaborar en las distintas etapas del desarrollo: la planificación, el diseño gráfico, el armado de la web/aplicación y en muchas de ellas también en el mantenimiento y actualización.<br>Utilizando siempre metodologías centradas en el usuario para ayudar a los equipos internos y externos a redactar los requisitos del producto y proporcionar información de investigación, mapas de experiencia, arquitectura de la información y wireframes.</p>
@@ -161,7 +161,7 @@
     =            TESTIMONIALS            =
     ===================================-->
     <h3 class="text-center mt-5 my-5">¿Que opinan mis clientes y colegas...?</h3>
-    <div class="carousel col-lg-10 mx-auto my-5 " id="carousel-t" data-ride="carousel" data-interval="10000" style="height: 480px;" >
+    <div class="carousel col-lg-10 mx-auto my-5 " id="carousel-t" data-ride="carousel" data-interval="10000" style="height: 500px;" >
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="col-10 text-center mx-auto testimonial-content"><img class="rounded-circle" src="img/guillermo-gamboa.jpg" />
@@ -172,8 +172,7 @@
             </div>
             <div class="carousel-item">
                 <div class="col-10 text-center mx-auto testimonial-content"><img class="rounded-circle" src="img/rodrigo-p.jpg" />
-                    <p class="text-center mt-3">&quot; He tenido la suerte de trabajar con Roberto en varios proyectos a lo largo de muchos años. Tiene la capacidad de analizar cada caso sin acudir a formulas genéricas y comprende rapidamente el espíritu que se esta persiguiendo
-                    en cada proyecto. Siempre escucha a los demás y hace propuestas a favor de mejorar la experiencia de usuario. No sólo es un diseñador que sabe utilizar sus herramientas, también es un artista. &quot;</p>
+                    <p class="text-center mt-3">&quot; He tenido la suerte de trabajar con Roberto en varios proyectos muchos años. Tiene la capacidad de analizar cada caso sin acudir a formulas genéricas. Hace propuestas a favor de mejorar la experiencia de usuario. No sólo es un diseñador que sabe utilizar sus herramientas, también es un artista. &quot;</p>
                     <p class="signature">Rodrigo Piacenza</p>
                     <p class="autor"><a href="https://www.linkedin.com/in/rodrigo-piacenza-4387249/" target="_blank" rel="noopener">Full Stack Developer</a></p>
                 </div>
@@ -215,24 +214,14 @@
 
 
     <div class="row justify-content-center py-2 my-5 bg-dark rounded-lg">
-        <div class="col col-sm-auto d-md-flex align-items-center text-sm-center">
-            <p class="pb-5" style="font-size: 2em;">¿Trabajamos juntos?. Contáctame y hablamos.<br><i class="fas fa-long-arrow-alt-down fa-xs anim-arrow"></i></p>
-            <!-- <ul class="nav navbar-social list-inline overflow-hidden ml-auto">
-             <li role="presentation" class="nav-item mr-2">    
-                 <a href="https://www.behance.net/betojaton" target="_blank" rel="noopener" title="Portfolio Behance" data-toggle="tooltip" data-placement="top"><i class="fab fa-behance-square fa-2x"></i></a>
-             </li>
-             <li role="presentation" class="nav-item mr-2">
-                 <a href="https://www.instagram.com/beto.jaton/" target="_blank" rel="noopener" title="Instagram"  data-toggle="tooltip" data-placement="top"><i class="fab fa-instagram fa-2x" data-toggle="tooltip" data-placement="top"></i></a>
-             </li>
-             <li role="presentation" class="nav-item mr-2">
-                 <a href="https://api.whatsapp.com/send?phone=3548595637" target="_blank" rel="noopener" title="Contact&aacute;me por Whatsapp" data-toggle="tooltip" data-placement="top"><i class="fab fa-whatsapp fa-2x"></i></a>
-             </li>
-             <li role="presentation" class="nav-item mr-2">
-               <a href="https://ar.linkedin.com/in/betojaton/" target="_blank" rel="noopener" title="Perfil LinkedIn"  data-toggle="tooltip" data-placement="top"><i class="fab fa-linkedin"></i></a>
-           </li>
-           <li role="presentation" class="nav-item mr-2">
-             <a href="https://t.me/betojaton" title="Telegram" target="_blank" rel="noopener" data-toggle="tooltip" data-placement="top"><i class="fab fa-telegram-plane fa-2x"></i></a>
-         </li>
-     </ul> -->
- </div>
+        <div class="col col-sm-auto d-md-flex align-items-center">
+            <p class="pb-5 text-center" style="font-size: 2em;">¿Trabajamos juntos?. Contáctame y hablamos.<br>
+                <script language="javascript">
+                    <!--
+// == Begin Free HTML Source Code Obfuscation Protection from https://snapbuilder.com == //
+document.write(unescape('%3C%61%20%68%72%65%66%3D%22%6D%61%69%6C%74%6F%3A%69%6E%66%6F%40%62%65%74%6F%6A%61%74%6F%6E%2E%63%6F%6D%22%20%74%69%74%6C%65%3D%22%43%6F%72%72%65%6F%20%50%65%72%73%6F%6E%61%6C%22%3E%69%6E%66%6F%40%62%65%74%6F%6A%61%74%6F%6E%2E%63%6F%6D%3C%2F%61%3E'));
+//-->
+</script>
+<!-- <i class="fas fa-long-arrow-alt-down fa-xs anim-arrow"></i> --></p>
+</div>
 </div>

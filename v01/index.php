@@ -39,7 +39,7 @@
         </div>
         <!--====  End of INICIO  ====-->
     </section>
-    <section class="section" data-anchor="page2" >
+    <section class="section" data-anchor="page2" id="seccion2" >
         <!--===============================
         =            PORTFOLIO            =
         ================================-->
