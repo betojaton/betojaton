@@ -13,7 +13,6 @@ $success-dark: #940;
 
 $body-bg: $secondary-light;
 
-.bg-secondary-light { background-color:$secondary-light; }
 
 /*Fuentes*/
 $font-family-sans-serif: 'Roboto', Arial, sans-serif;
@@ -34,6 +33,8 @@ Blog: -
 @import "../bootstrap/scss/bootstrap";
 @import 'liquid-slider', 'bg-animated', 'off-canvas-sidebar-drawer-navbar', 'animated-type-heading', 'skill-bars', 'time-line', 'testimonial-slider', 'features-boxed', 'filterable-gallery';
 /*=====  End of IMPORTS  ======*/
+
+
 
 
 /*RESET*/
@@ -96,6 +97,7 @@ article {
 		margin: calc(1ex / 0.38) 0;
 	}
 }
+.bg-secondary-light { background-color:$secondary-light; }
 .btn { 
 	font-family: $font-family-serif;
 	font-weight: 400;
@@ -224,13 +226,13 @@ article {
 		width: 100%;
 		height: 100%;
 		left: -10px;
-	/* 	top: 20%;
-	-moz-transform: translate(0px,-40%) skew(-45deg, 0deg);
-	-webkit-transform: translate(0px,-40%) skew(-45deg, 0deg);
-	-o-transform: translate(0px,-40%) skew(-45deg, 0deg);
-	-ms-transform: translate(0px,-40%) skew(-45deg, 0deg);
-	transform: translate(0px,-40%) skew(-45deg, 0deg); */
-} 
+		/* 	top: 20%;
+		-moz-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-webkit-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-o-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-ms-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		transform: translate(0px,-40%) skew(-45deg, 0deg); */
+	} 
 }
 footer {
 	color: $primary;
@@ -263,6 +265,10 @@ footer {
 			border-style: solid;
 			border-color: #fff;
 			transform: rotate(45deg);
+			moz-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
 			top: -10px;
 		}
 		&.fp-prev {
@@ -305,9 +311,6 @@ section#inicio {
 	background-size: contain;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	h2.cd-headline {
-		text-shadow: 0 2px 10px $secondary-dark;
-	}
 	.more-about {
 		position: absolute;
 		top: 80%;
@@ -362,10 +365,6 @@ section {
 			}
 
 		}
-		/* .container {
-			height: 100vh;
-		} */
-		
 	}
 }
 /*=====  End of CONTENT SECCION  ======*/
@@ -424,18 +423,11 @@ footer {
 /*======================================
 =            MEDIAS QUERIES            =
 ======================================*/
-@/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-	.btn-group{
-		display: inline-block;
-	}
-}
+
 /*=============================================
 MOVIL VERTICAL (revisamos en 320px)
 =============================================*/
-@media (max-width:320px){
+@media (max-width:320px) {
 	#main {
 		background-image: url("../img/bg-foto-icons01_sm.png");
 	}
@@ -450,8 +442,11 @@ MOVIL VERTICAL (revisamos en 320px)
 	h2.cd-headline {
 		font-size: 300%;
 		letter-spacing: 0;
+		text-shadow: 0 2px 10px $secondary-dark;
 	}
-	
+	.filtr-controls { 
+		display: inline-block !important;
+	}
 }
 
 /*----------  SM  ----------*/
@@ -480,7 +475,6 @@ MOVIL VERTICAL (revisamos en 320px)
 }
 
 @media (min-width: 1200px) {
-
 	.navbar.off-canvas[data-open-drawer="1"], .navbar.off-canvas.open {
 		-webkit-transform: translateX(0%);
 		transform: translateX(0%);

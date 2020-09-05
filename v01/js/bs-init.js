@@ -56,17 +56,19 @@ var myFullpage = new fullpage('#fullpage', {
         easingcss3: 'ease-out', // Curva de velocidad del efecto.
         scrollOverflow: true,
         scrollBar: false,
-        slidesNavigation: false,
+        slidesNavigation: true,
         fitToSectionDelay: 1000, // Delay antes de acomodar la seccion automaticamente.
         verticalCentered: false, // No se alinearan vertical los contenidos de cada seccion.
-        //responsiveWidth: 321,
+        normalScrollElements: '#estudios, #experiencia',
         // ──────────────────────────────────────────────────
         //   :::::: Navegación
         // ──────────────────────────────────────────────────
         //anchors: ['section1'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
         //lockAnchors: true,
+        navigation: true,
+        navigationPosition: 'left',
         menu: '#menu-ppal', // Menu de navegación.
-        keyboardScrolling: true, //Navega con las flechas.
+        keyboardScrolling: true, //Navega con las flechas
     });
 
 //Tooltip
@@ -76,7 +78,7 @@ $(function () {
 
 //Oculta el Sidebar despues de hacer click en algun item.
 $('a.nav-link').click(function(){
-    $('.off-canvas').attr('data-open-drawer','0').removeClass('open');
+	$('.off-canvas').attr('data-open-drawer','0').removeClass('open');
 
 });
 
