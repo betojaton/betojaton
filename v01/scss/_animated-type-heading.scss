@@ -1,0 +1,108 @@
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-family: $font-family-serif;
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+
+  b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+    color: $primary-light;
+    font-size: inherit;
+
+    &::before {
+      content: '|';
+      color: $primary-light;
+      margin-right: 2px;
+      font-size: inherit;
+      font-weight: 100;
+      top: -1px;
+    }
+    &.is-visible {
+      position: relative;
+    }
+  }
+}
+
+.blc {
+  font-size: inherit;
+}
+
+
+h2.cd-headline {
+  font-family: $font-family-sans-serif;
+  line-height: 100%;
+  font-size: 360%;
+
+  &.clip {
+    span {
+      display: inline-block;
+    }
+
+    .cd-words-wrapper {
+      overflow: hidden;
+      vertical-align: top;
+      font-size: 70%;
+    }
+
+    b {
+      opacity: 0;
+    }
+  }
+
+  b.is-visible {
+    opacity: 1;
+    font-weight: 900;
+  }
+}
+.outer-wrapper {
+  height: 100vh;
+  width: auto;
+  background-repeat: no-repeat;
+}
+
+.container.sin-estilo {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+/*======================================
+=            MEDIAS QUERIES            =
+======================================*/
+/*----------  XS  ----------*/
+@media (max-width: 320px) {
+  h2.cd-headline {
+    font-size: 210%;
+    &.clip .cd-words-wrapper {
+      font-size: 56%;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+/*----------  SM  ----------*/
+@media (max-width: 576px) {
+  .cd-words-wrapper {
+    font-size: 80%;
+  }
+}
+
+/*----------  MD  ----------*/
+@media (max-width: 768px) {
+
+}
+
+/*----------  LG  ----------*/
+@media (max-width: 992px) {}
+
+
+@media (max-width: 1200px) {}
+

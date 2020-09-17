@@ -1,0 +1,573 @@
+//Theme Custom
+/* Colores*/
+$primary: #2AD1C9;
+$primary-light:#70FFFC;
+$primary-dark:#009F98;
+$secondary: #192734;
+$secondary-light: #404E5D;
+$secondary-dark: #00000C;
+$success: #FF8E33;
+$success-light: #FFE3CC;
+$success-dark: #940;
+
+$body-bg: $secondary-light;
+
+
+/*Fuentes*/
+$font-family-sans-serif: 'Roboto',
+Arial,
+sans-serif;
+$font-family-serif: 'Roboto Slab',
+Times,
+serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;
+$headings-color: $primary;
+
+
+/*==============================
+=     IMPORTS  .scss
+Portfolio: filterable-gallery 
+SobreMi: skill-bars, time-line, testimonial-slider 
+Servicios: features-boxed
+Blog: -      
+=
+===============================*/
+@import "../bootstrap/scss/bootstrap";
+@import 'liquid-slider', 'bg-animated', 'off-canvas-sidebar-drawer-navbar', 'animated-type-heading', 'skill-bars', 'time-line', 'testimonial-slider', 'features-boxed', 'filterable-gallery';
+/*=====  End of IMPORTS  ======*/
+
+
+
+
+/*RESET*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+p {
+    line-height: calc(1ex / 0.32); //altura de línea óptima para las fuentes serif y sans-serif
+    margin: calc(1ex / 0.32) 0;
+    width: 60ch; //ajusta a 60 caracteres por línea
+    max-width: 100%;
+    font-size: 1.2em;
+}
+
+p[lang=”es”] {
+    text-align: justify;
+    hyphens: auto;
+}
+
+/*----------  Modular Fonts  ----------*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 2.75rem 0 1.05rem;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.488em;
+}
+
+h2 {
+    font-size: 2.074em;
+}
+
+h3 {
+    font-size: 1.728em;
+}
+
+h4 {
+    font-size: 1.44em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+small,
+.text_small {
+    font-size: 0.833em;
+}
+
+/*----------  /Modular Fonts  ----------*/
+
+
+body {
+    background-color: $secondary-light;
+    font-family: $font-family-sans-serif;
+    color: $success-light;
+    line-height: 160%;
+    font-weight: 300;
+}
+
+article {
+    h1 {
+        line-height: calc(1ex / 0.42);
+        margin: calc(1ex / 0.42) 0;
+    }
+
+    h2 {
+        line-height: calc(1ex / 0.42);
+        margin: calc(1ex / 0.42) 0;
+    }
+
+    h3 {
+        line-height: calc(1ex / 0.38);
+        margin: calc(1ex / 0.38) 0;
+    }
+}
+
+.bg-secondary-light {
+    background-color: $secondary-light;
+}
+
+.btn {
+    font-family: $font-family-serif;
+    font-weight: 400;
+}
+
+.card {
+    background-color: $secondary-light;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+/*===============================
+=            PRELOAD            =
+===============================*/
+#preload {
+    z-index: 9999;
+    top: 0;
+
+    #porcentajeCarga {
+        top: 52%;
+    }
+
+    #lineaCarga {
+        height: 2px;
+        top: 50%;
+        left: 0%;
+
+        #rellenoCarga {
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+        }
+    }
+
+    #estadoCarga {
+        background: url(../img/loader.gif);
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*=====  End of PRELOAD  ======*/
+
+
+
+/*===============================
+=            SIDEBAR            =
+===============================*/
+
+/*----------  NAVBAR PPAL  ----------*/
+.navbar-ppal {
+    height: 100vh;
+    top: 144px;
+    position: absolute;
+
+    a.nav-link {
+        color: $primary !important;
+        font-family: $font-family-serif;
+        position: relative;
+
+        &:hover,
+        &.ls-current {
+            background-color: $secondary;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            margin-left: 10px;
+            text-align: center;
+        }
+    }
+
+    .navbar-nav {
+        a {
+            color: $secondary-light;
+        }
+    }
+
+    .nav-tabs .nav-link.active {
+        color: $primary;
+        font-family: $font-family-serif;
+        background-color: transparent;
+        border-bottom: 2px solid $secondary-light;
+    }
+
+    .navbar-social {
+        i {
+            font-size: 24px;
+        }
+    }
+}
+
+/*----------  /NAVBAR PPAL  ----------*/
+
+.navbar.off-canvas {
+    z-index: 999;
+}
+
+.off-canvas {
+    .btn-close {
+        height: 38px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+
+        .icon {
+            color: $secondary;
+        }
+    }
+
+    .navbar-brand {
+        position: absolute;
+        background-image: url("../img/logo-betojaton.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        width: 32px;
+        height: 32px;
+        left: 278px;
+        top: 60px;
+        transition: all 300ms;
+
+        &:hover {
+            width: 104px;
+        }
+    }
+
+    &.open {
+        .navbar-brand {
+            width: 104px;
+            left: 30px;
+        }
+    }
+
+    .bg-skew {
+        background-color: $secondary;
+        position: absolute;
+        z-index: -9;
+        width: 100%;
+        height: 100%;
+        left: -10px;
+        /* 	top: 20%;
+		-moz-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-webkit-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-o-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		-ms-transform: translate(0px,-40%) skew(-45deg, 0deg);
+		transform: translate(0px,-40%) skew(-45deg, 0deg); */
+    }
+}
+
+footer {
+    color: $primary;
+    background-color: $secondary-light;
+}
+
+/*=====  End of SIDEBAR  ======*/
+/*================================
+=            Clases FULLPAGE            =
+================================*/
+#fullpage {
+    .fp-controlArrow {
+        z-index: 99;
+        color: $secondary-dark;
+        background-color: rgba($secondary, .1);
+        border-radius: 100px;
+        transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+        &:hover {
+            background-color: rgba($secondary, .8);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px !important;
+            width: 24px; 
+            height: 24px;
+            display: block;
+            border-width: 3px 3px 0 0;
+            border-style: solid;
+            border-color: #fff;
+            transform: rotate(45deg);
+        }
+        &.fp-prev {
+            left: 8%;
+            &::before {
+                transform: rotate(-135deg);
+                left: 10px;
+            }
+        }
+        &.fp-next {
+            right: 8%;
+            &::before {
+                right: 10px;
+            }
+        }
+        &.fp-prev,
+        &.fp-next {
+            border-color: transparent !important;
+        }
+    }
+}
+
+/*----------  Deshabilito el alto de las secciones  ----------*/
+@media (max-width: 640px) {
+
+    .fp-tableCell,
+    .fp-section,
+    .fp-slides {
+        height: auto !important;
+    }
+
+    .fp-slides {
+        overflow: visible !important;
+    }
+}
+
+/*=====  End of Clases FULLPAGE  ======*/
+
+
+/*=========================================
+=            CONTENT SECCION          =
+=========================================*/
+section#inicio {
+    background-image: url("../img/bg-foto-icons01.webp");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .more-about {
+        position: absolute;
+        top: 80%;
+
+        a:hover {
+            color: $primary;
+        }
+    }
+}
+
+section {
+    background-color: rgba($secondary-light, 0.8);
+    min-height: 100vh;
+    /*----------  INICIO  ----------*/
+
+    /*----------  SLIDERs  ----------*/
+    .slide {
+        padding: 3em 0;
+
+        /* height: 110vh; */
+        header {
+            margin-bottom: 3rem;
+
+            h2 {
+                font-size: 1.186rem;
+                border-bottom: 1px solid $secondary-dark;
+                position: relative;
+                padding-bottom: 30px;
+                letter-spacing: 10px;
+                text-transform: uppercase;
+                font-weight: 900;
+
+                span {
+                    position: absolute;
+                    bottom: -23px;
+                    left: 45%;
+                    background-color: $secondary-light;
+                    /* background-image: url('../img/bg-iso-title.svg');
+					background-repeat: no-repeat;
+					background-size: cover; 
+					font-size: 16px;
+					font-weight: 900;
+					line-height: 34px;
+					width: 28px;
+                    text-align: center;
+					*/
+                    color: $secondary-light;
+                    padding-left: 8px;
+                    border-left: 10px solid $secondary-light;
+                    border-right: 10px solid $secondary-light;
+                    box-sizing: content-box;
+
+                }
+            }
+
+            .lead {
+                line-height: 1.5;
+                letter-spacing: .2em;
+                font-size: 1rem;
+                padding-top: 2em;
+            }
+        }
+
+        .icon {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
+/*=====  End of CONTENT SECCION  ======*/
+
+/*==============================
+=            FOOTER            =
+==============================*/
+footer {
+    color: $secondary-dark;
+}
+
+
+/*=====  End of FOOTER  ======*/
+/*----------  MISC  ----------*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.skew {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.border-top-left {
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.tooltip-inner {
+    background: $secondary;
+    font-size: 12px;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: $secondary !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: $secondary !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: $secondary !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: $secondary !important;
+}
+
+/*----------  Efecto Fotos  ----------*/
+.foto-bj {
+    filter: url(filters.svg#grayscale);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+    -moz-transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+    -o-transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+    transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+
+    &:hover {
+        filter: none;
+        -webkit-filter: none;
+    }
+}
+
+/*----------  /Efecto Fotos  ----------*/
+/*======================================
+=            MEDIAS QUERIES            =
+======================================*/
+
+/*=============================================
+MOVIL VERTICAL (revisamos en 320px)
+=============================================*/
+@media (max-width:320px) {
+    #main {
+        background-image: url("../img/bg-foto-icons01_sm.webp");
+    }
+
+    .off-canvas .navbar-brand {
+        left: 390px;
+        top: 12px;
+    }
+
+    .navbar-ppal {
+        position: absolute;
+        top: 80px;
+    }
+
+    h2.cd-headline {
+        font-size: 300%;
+        letter-spacing: 0;
+        text-shadow: 0 2px 10px $secondary-dark;
+    }
+
+    .filtr-controls {
+        display: inline-block !important;
+    }
+}
+
+/*----------  SM  ----------*/
+@media (max-width: 575px) and (min-width: 321px) {
+    .off-canvas .navbar-brand {
+        left: 300px;
+        top: 80px;
+    }
+}
+
+/*=============================================
+		MÓVIL (revisamos en 576px)
+=============================================*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .off-canvas .navbar-brand {
+        left: 240px;
+        top: 80px;
+    }
+}
+
+/*----------  LG  ----------*/
+@media (min-width: 992px) {
+    .lead {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .navbar.off-canvas[data-open-drawer="1"],
+    .navbar.off-canvas.open {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+}
