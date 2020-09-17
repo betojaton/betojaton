@@ -3,7 +3,6 @@
 		background-color: $secondary-light;
 		transition: 0.3s;
 		text-align: center;
-		height: 100%;
 		border-width: 0;
 		padding: 0;
 		overflow: hidden;
@@ -14,12 +13,12 @@
 		color: $secondary-dark;
 	} */
 	.icon {
-		font-size: 54px;
-		width: 52px;
-		margin: 20px auto 10px;
+		width: 64px;
+		height: 64px;
+		margin: 10px auto;
 		overflow: hidden;
-		border-top-left-radius: 2rem ;
-		border-bottom-right-radius: 2rem;
+		/* border-top-left-radius: 2rem;
+		border-bottom-right-radius: 2rem; */
 		padding: 0.5rem;
 		transition: all 500ms;
 	}

@@ -30,7 +30,8 @@ $(document).ready(function(){
                 showCounter : false,
                 history : false,
                 captionType : 'data',
-                captionsData : 'caption'
+                captionsData : 'caption',
+                fileExt: 'png|jpg|jpeg|gif|webp'
             });
             lightbox.refresh();
            

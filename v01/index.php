@@ -1,5 +1,3 @@
-
-
 <?php include_once 'header.php'; ?>
 <body>
     <div id="preload" class="position-fixed w-100 h-100 bg-primary">
@@ -191,4 +189,4 @@ viewBox="0 0 1820 1080" style="enable-background:new 0 0 1820 1080; position: ab
 </g>
 </svg>
 <!--====  End of BG ANIMATED  ====-->
-<?php include_once 'footer.php'; ?> 
+<?php include_once 'footer.php'; ?>

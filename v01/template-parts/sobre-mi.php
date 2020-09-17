@@ -1,6 +1,8 @@
 <div class="container container-page p-sm-0" >
 	<header class="col col-md-8 mx-auto text-center">
-		<h2 class="title">Sobre Mi <span><i class="fas fa-user icon"></i></span></h2>
+		<h2 class="title">Sobre Mi <span><!-- <i class="fas fa-user icon"></i> --><svg class="icon">
+  <use xlink:href="#icon-user"></use>
+</svg></span></h2>
 		<p class="lead mx-auto">
 			Soy un Diseñador Freelance Senior con más de 20 años de experiencia en diseño UX/UI, identidad visual, diseño de packaging, diseño de imágenes para redes sociales y animaciones, para una amplia gama de industrias.
 		</p>
@@ -26,7 +28,9 @@
                     <!--==============================
                     =            ESTUDIOS            =
                     ===============================-->
-                    <h3 class="mt-0 sticky bg-secondary-light pb-3"><i class="fas fa-graduation-cap"></i> Estudios</h3>
+                    <h3 class="mt-0 sticky bg-secondary-light pb-3"><svg class="icon">
+  <use xlink:href="#icon-estudio"></use>
+</svg> Estudios</h3>
                     <hr>
                     <ul class="timeline small">
                     	<li>
@@ -51,7 +55,9 @@
                     <!--=================================
                     =            EXPERIENCIA            =
                     ==================================-->
-                    <h3 class="mt-0 sticky bg-secondary-light pb-3"><i class="fas fa-briefcase"></i> Experiencia</h3>
+                    <h3 class="mt-0 sticky bg-secondary-light pb-3"><svg class="icon">
+  <use xlink:href="#icon-experiencia"></use>
+</svg> Experiencia</h3>
                     <hr>
                     <ul class="timeline small">
                     	<li>
@@ -91,13 +97,15 @@
                     <!--====  End of EXPERIENCIA  ====-->
                 </div>
             </div><!--/row-->
-            <div class="row">
+            <div class="row" id="habilidades">
             	<h3 class="mt-5 mb-3 pt-3 w-100 text-center">Algunas Habilidades...</h3>
             	<div class="col-md-7 pr-md-5">
                     <!--======================================
                     =            SKILLS DISEÑADOR            =
                     =======================================-->
-                    <h4 class="mb-3"><i class="fas fa-pencil-ruler"></i> Diseñador</h4>
+                    <h4 class="mb-3"><svg class="icon">
+  <use xlink:href="#icon-diseno"></use>
+</svg> Diseñador</h4>
                     <hr>
                     <div class="progress mb-3">
                     	<div class="progress-bar p-1" style="width: 90%;">
@@ -135,7 +143,9 @@
                     <!--=====================================
                     =            SKILL FRONT-END            =
                     ======================================-->                    
-                    <h4 class="mb-3"><i class="fas fa-laptop-code"></i> Front-End</h4>
+                    <h4 class="mb-3"><svg class="icon">
+  <use xlink:href="#icon-code"></use>
+</svg> Front-End</h4>
                     <hr>
                     <div>
                     	<div class="progress-circle mr-2 blue">
