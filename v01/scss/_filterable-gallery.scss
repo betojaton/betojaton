@@ -19,11 +19,16 @@
     font-size: 300;
     font-size: 0.85em;
     letter-spacing: 1px;
+    
+    &.effect.hover-skew::after {
+      color: $primary;
+      background: $secondary;
+    }
     &:hover, &.active {
       color: $primary !important;
       background-color: $secondary !important;
     }
-    &:after {
+    /* &:after {
      position: absolute;
      content: '';
      top: 0;
@@ -40,15 +45,13 @@
      -webkit-transition: all 0.17s ease-in-out;
      -o-transition: all 0.17s ease-in-out;
 
-   }
-   &.active:after {
+   } */
+  /*  &.active:after {
     width: 100%;
     left: 0;
-  }
+  } */
 }
 }
-
-
 
 @media (max-width: 479px) {
   .filtr-item {
@@ -81,7 +84,7 @@
 
   &:hover {
     > a:before {
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.5);
     }
 
     > a:after {
@@ -102,8 +105,6 @@
     opacity: 0;
   }
 }
-
-
 .filtr-loading {
   border: 5px solid #333;
   position: relative;

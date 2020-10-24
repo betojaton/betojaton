@@ -17,8 +17,16 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700,700i">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+	<link rel="stylesheet" href="assets/css/Pure-CSS-parallax-scroll-demo.css">
+	<link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+	<link rel="stylesheet" href="assets/css/filterable-gallery-lightbox.css">
+	<link rel="stylesheet" href="assets/css/device-mockup.css">
+	<link rel="stylesheet" href="assets/css/Off-Canvas-Sidebar-Drawer-Navbar.compiled.css">
+	<link rel="stylesheet" href="assets/css/styles.compiled.css">
+	<link rel="stylesheet" href="assets/css/custom.compiled.css">
+	<link rel="stylesheet" href="assets/css/variables.compiled.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-	<link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body>
@@ -27,7 +35,7 @@
 		<div class="col-lg-8 mx-auto">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 mr-md-auto">
+					<div class="col-md-6">
 						<ul>
 							<li><strong>CATEGORIA</strong> Diseño Web, Logotipo, Diseño Gráfico, Wordpress<br></li>
 							<li><strong>INDUSTRIA</strong> Asociación Civl ONG<br></li>
@@ -64,8 +72,14 @@
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/bs-init.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-	<script src="../js/bs-init.js"></script>
+	<script src="assets/js/Off-Canvas-Sidebar-Drawer-Navbar.js"></script>
+	<script src="assets/js/Off-Canvas-Sidebar-Drawer-Navbar-1.js"></script>
+	<script src="assets/js/Animated-Type-Heading.js"></script>
+	<script src="assets/js/Pure-CSS-parallax-scroll-demo.js"></script>
+	<script src="assets/js/Sidebar-Menu.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 
 </html>

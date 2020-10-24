@@ -87,8 +87,8 @@
                     		Destaco de esta etapa el trabajo en equipo, la familiarización con sistemas de versionado, el uso de pixelperfect en el resultado final de cada trabajo, consiguiendo la validación del código maquetado y el Cross-browsing (equivalencia entre navegadores estándar y los demás).</p>
                     	</li>
                     	<li>
-                    		<h4>Diseñador UX/UI | 4r Soluciones <small>(Santa Fe, Argentina)</small></h4>
-                    		<span class="fecha">Diciembre, 2009 - Septiembre, 2012</span>
+                    		<h4>Diseñador UX/UI | i2T <small>(Santa Fe, Argentina)</small></h4>
+                    		<span class="fecha">Febrero, 2001 - Julio, 2008</span>
                     		<p>Diseñador Multimedial, trabaje tanto en el diseño de interfaces como en el maquetado con tecnologías XHTML, CSS, Javascript, Flash con codificación .asp y .net  junto a un equipo de programadores.<br>
                     			Destaco la oportunidad de trabajar en el armado del sitio web para CILSA, (Organización para personas con discapacidad) implementando y validando usabilidad y accesibilidad para la W3C.<br>
                     		También estuve a cargo de los diseños webs, armados, diseños de banner estáticos y animados (flash) y cargas de los contenido de los sitios: Unión Industrial de Santa Fe, Aldeas Rurales de Santa Fe, Caja Forense de Entre Ríos y Lotería de Santa Fe entre otros.</p>
@@ -210,9 +210,14 @@
     		</div>
     	</div><!---/carousel-inner-->
     	<div>
-    		<a href="#carousel-t" data-slide="prev" class="carousel-control-prev"><i class="fas fa-long-arrow-alt-left d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Anterior</span></a><a href="#carousel-t" data-slide="next" class="carousel-control-next"><i class="fas fa-long-arrow-alt-right d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Siguiente</span></a>
+    		<a href="#carousel-t" data-slide="prev" class="carousel-control-prev" role="button">
+				<i class="fas fa-long-arrow-alt-left d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Anterior</span>
+			</a>
+			<a href="#carousel-t" data-slide="next" class="carousel-control-next" role="button">
+				<i class="fas fa-long-arrow-alt-right d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Siguiente</span>
+			</a>
     	</div>
-    	<ol class="carousel-indicators">
+    	<ol class="carousel-indicators" >
     		<li data-target="#carousel-t" data-slide-to="0" class="active"></li>
     		<li data-target="#carousel-t" data-slide-to="1"></li>
     		<li data-target="#carousel-t" data-slide-to="2"></li>

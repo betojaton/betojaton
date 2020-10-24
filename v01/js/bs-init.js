@@ -61,10 +61,9 @@ $(document).ready(function(){
             // ──────────────────────────────────────────────────
             //   :::::: Navegación
             // ──────────────────────────────────────────────────
-            //anchors: ['section1'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
-            //lockAnchors: true,
-            navigation: true,
-            navigationPosition: 'left',
+            // anchors: ['section1'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
+            // lockAnchors: true,
+
             menu: '#menu-ppal', // Menu de navegación.
             keyboardScrolling: true, //Navega con las flechas
         });

@@ -1,0 +1,15 @@
+name: bj2020
+slug: bj2020
+type: theme
+version: 1.0
+description: Theme Portfolio Web
+icon:  microchip
+author: betojaton
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-bj2020
+demo: https://demo.getgrav.org/onepage-skeleton
+keywords: fullpage, slide, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/getgrav/grav-theme-quark/issues
+license: MIT

@@ -34,11 +34,8 @@ Blog: -
 =
 ===============================*/
 @import "../bootstrap/scss/bootstrap";
-@import 'liquid-slider', 'bg-animated', 'off-canvas-sidebar-drawer-navbar', 'animated-type-heading', 'skill-bars', 'time-line', 'testimonial-slider', 'features-boxed', 'filterable-gallery';
+@import 'liquid-slider', 'bg-animated', 'off-canvas-sidebar-drawer-navbar', 'animated-type-heading', 'skill-bars', 'time-line', 'testimonial-slider', 'features-boxed', 'filterable-gallery', 'media-queries';
 /*=====  End of IMPORTS  ======*/
-
-
-
 
 /*RESET*/
 html {
@@ -196,20 +193,19 @@ article {
     height: 100vh;
     top: 144px;
     position: absolute;
-
     a.nav-link {
-        color: $primary !important;
+        color: $primary;
         font-family: $font-family-serif;
         position: relative;
+        margin: 5px 0 ;
 
         &:hover,
         &.ls-current {
-            background-color: $secondary;
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             transition: all 0.3s;
             margin-left: 10px;
-            text-align: center;
+            color: $secondary-light;
         }
     }
 
@@ -259,7 +255,6 @@ article {
         background-position: left center;
         width: 32px;
         height: 32px;
-        left: 278px;
         top: 60px;
         transition: all 300ms;
 
@@ -274,7 +269,6 @@ article {
             left: 30px;
         }
     }
-
     .bg-skew {
         background-color: $secondary;
         position: absolute;
@@ -282,12 +276,7 @@ article {
         width: 100%;
         height: 100%;
         left: -10px;
-        /* 	top: 20%;
-		-moz-transform: translate(0px,-40%) skew(-45deg, 0deg);
-		-webkit-transform: translate(0px,-40%) skew(-45deg, 0deg);
-		-o-transform: translate(0px,-40%) skew(-45deg, 0deg);
-		-ms-transform: translate(0px,-40%) skew(-45deg, 0deg);
-		transform: translate(0px,-40%) skew(-45deg, 0deg); */
+        
     }
 }
 
@@ -298,7 +287,7 @@ footer {
 
 /*=====  End of SIDEBAR  ======*/
 /*================================
-=            Clases FULLPAGE            =
+=            Class FULLPAGE           =
 ================================*/
 #fullpage {
     .fp-controlArrow {
@@ -307,14 +296,16 @@ footer {
         background-color: rgba($secondary, .1);
         border-radius: 100px;
         transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+
         &:hover {
             background-color: rgba($secondary, .8);
         }
+
         &::before {
             content: '';
             position: absolute;
             top: -10px !important;
-            width: 24px; 
+            width: 24px;
             height: 24px;
             display: block;
             border-width: 3px 3px 0 0;
@@ -322,19 +313,24 @@ footer {
             border-color: #fff;
             transform: rotate(45deg);
         }
+
         &.fp-prev {
-            left: 8%;
+            left: 3%;
+
             &::before {
                 transform: rotate(-135deg);
                 left: 10px;
             }
         }
+
         &.fp-next {
-            right: 8%;
+            right: 3%;
+
             &::before {
                 right: 10px;
             }
         }
+
         &.fp-prev,
         &.fp-next {
             border-color: transparent !important;
@@ -363,7 +359,7 @@ footer {
 =            CONTENT SECCION          =
 =========================================*/
 section#inicio {
-    background-image: url("../img/bg-foto-icons01.webp");
+    background-image: url("../img/bg-foto-icons02.webp");
     background-position: top right;
     background-size: contain;
     background-repeat: no-repeat;
@@ -487,7 +483,7 @@ footer {
     border-top-color: $secondary !important;
 }
 
-/*----------  Efecto Fotos  ----------*/
+/*----------  Efecto   ----------*/
 .foto-bj {
     filter: url(filters.svg#grayscale);
     filter: gray;
@@ -503,71 +499,74 @@ footer {
     }
 }
 
-/*----------  /Efecto Fotos  ----------*/
-/*======================================
-=            MEDIAS QUERIES            =
-======================================*/
 
-/*=============================================
-MOVIL VERTICAL (revisamos en 320px)
-=============================================*/
-@media (max-width:320px) {
-    #main {
-        background-image: url("../img/bg-foto-icons01_sm.webp");
-    }
 
-    .off-canvas .navbar-brand {
-        left: 390px;
-        top: 12px;
+.effect {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-perspective: 400;
+  -moz-perspective: 400;
+  -ms-perspective: 400;
+  -o-perspective: 400;
+  perspective: 400;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1em;
+  backface-visibility: hidden;
+  &:before, &:after {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0;
+      -webkit-transform-origin: center center 0 50%;
+      -moz-transform-origin: center center 0 50%;
+      -ms-transform-origin: center center 0 50%;
+      -o-transform-origin: center center 0 50%;
+      transform-origin: center center 0 50%;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      position: absolute;
+      content: attr(data-effect);
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+  }
+  &.hover-skew {
+      padding: 6px 10px;
+      overflow: hidden;
+      &:after {
+        opacity: 1;
+        top: 0;
+        left: 50%;
+        margin-left: 0%;
+        bottom: 0;
+        width: 0%;
+        color: $secondary;
+        background: $primary;
+        z-index: -1;
+        -webkit-transform: skewX(-45deg);
+        -moz-transform: skewX(-45deg);
+        -ms-transform: skewX(-45deg);
+        -o-transform: skewX(-45deg);
+        transform: skewX(-45deg);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     }
-
-    .navbar-ppal {
-        position: absolute;
-        top: 80px;
-    }
-
-    h2.cd-headline {
-        font-size: 300%;
-        letter-spacing: 0;
-        text-shadow: 0 2px 10px $secondary-dark;
-    }
-
-    .filtr-controls {
-        display: inline-block !important;
-    }
+    &:hover {
+      color: $secondary;
+      &:after {
+          margin-left: -50%;
+          width: 100%;
+      }
+  }
+}
 }
 
-/*----------  SM  ----------*/
-@media (max-width: 575px) and (min-width: 321px) {
-    .off-canvas .navbar-brand {
-        left: 300px;
-        top: 80px;
-    }
-}
-
-/*=============================================
-		MÓVIL (revisamos en 576px)
-=============================================*/
-@media (max-width: 767px) and (min-width: 576px) {
-    .off-canvas .navbar-brand {
-        left: 240px;
-        top: 80px;
-    }
-}
-
-/*----------  LG  ----------*/
-@media (min-width: 992px) {
-    .lead {
-        width: 75%;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .navbar.off-canvas[data-open-drawer="1"],
-    .navbar.off-canvas.open {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-    }
-
-}
+/*----------  /Efecto   ----------*/

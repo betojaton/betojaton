@@ -16,7 +16,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" rel="stylesheet">-->
-	<link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
-	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/fullpage.min.css" rel="stylesheet" type="text/css">
+	<link href="css/custom.css" rel="stylesheet" >
 	<!-- <link href="css/hover-min.css" rel="stylesheet"> -->
 </head>
