@@ -100,7 +100,6 @@ small,
 
 /*----------  /Modular Fonts  ----------*/
 
-
 body {
     background-color: $secondary-light;
     font-family: $font-family-sans-serif;
@@ -183,12 +182,11 @@ article {
 /*=====  End of PRELOAD  ======*/
 
 
-
 /*===============================
 =            SIDEBAR            =
 ===============================*/
 
-/*----------  NAVBAR PPAL  ----------*/
+/*----  NAVBAR PPAL  ----------*/
 .navbar-ppal {
     height: 100vh;
     top: 144px;
@@ -206,6 +204,11 @@ article {
             transition: all 0.3s;
             margin-left: 10px;
             color: $secondary-light;
+        }
+        .icon {
+            max-width: 24px;
+            max-height: 24px;
+            /* background-color: $secondary; */
         }
     }
 
@@ -229,7 +232,7 @@ article {
     }
 }
 
-/*----------  /NAVBAR PPAL  ----------*/
+/*----  /NAVBAR PPAL  ----------*/
 
 .navbar.off-canvas {
     z-index: 999;
@@ -290,6 +293,12 @@ footer {
 =            Class FULLPAGE           =
 ================================*/
 #fullpage {
+    background-image: url("../img/bg-foto-icons02.webp");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     .fp-controlArrow {
         z-index: 99;
         color: $secondary-dark;
@@ -340,13 +349,11 @@ footer {
 
 /*----------  Deshabilito el alto de las secciones  ----------*/
 @media (max-width: 640px) {
-
     .fp-tableCell,
     .fp-section,
     .fp-slides {
         height: auto !important;
     }
-
     .fp-slides {
         overflow: visible !important;
     }
@@ -356,86 +363,106 @@ footer {
 
 
 /*=========================================
-=            CONTENT SECCION          =
+=            CONTENT SECTIONS         =
 =========================================*/
-section#inicio {
-    background-image: url("../img/bg-foto-icons02.webp");
-    background-position: top right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
+section {
+    background-color: rgba($secondary-light, 0.8);
+}
 
+/*----------  INICIO  ----------*/
+.inicio {
+    overflow: hidden;
+    background-color: transparent;
+    height: 100vh;
     .more-about {
         position: absolute;
         top: 80%;
+        color: $primary;
+        font-family: $font-family-sans-serif;
 
         a:hover {
             color: $primary;
+            background-color: $secondary;
         }
     }
+
 }
 
-section {
-    background-color: rgba($secondary-light, 0.8);
-    min-height: 100vh;
-    /*----------  INICIO  ----------*/
-
-    /*----------  SLIDERs  ----------*/
-    .slide {
-        padding: 3em 0;
-
-        /* height: 110vh; */
-        header {
-            margin-bottom: 3rem;
-
-            h2 {
-                font-size: 1.186rem;
-                border-bottom: 1px solid $secondary-dark;
-                position: relative;
-                padding-bottom: 30px;
-                letter-spacing: 10px;
-                text-transform: uppercase;
-                font-weight: 900;
-
-                span {
-                    position: absolute;
-                    bottom: -23px;
-                    left: 45%;
-                    background-color: $secondary-light;
-                    /* background-image: url('../img/bg-iso-title.svg');
-					background-repeat: no-repeat;
-					background-size: cover; 
-					font-size: 16px;
-					font-weight: 900;
-					line-height: 34px;
-					width: 28px;
-                    text-align: center;
-					*/
-                    color: $secondary-light;
-                    padding-left: 8px;
-                    border-left: 10px solid $secondary-light;
-                    border-right: 10px solid $secondary-light;
-                    box-sizing: content-box;
-
-                }
-            }
-
-            .lead {
-                line-height: 1.5;
-                letter-spacing: .2em;
-                font-size: 1rem;
-                padding-top: 2em;
-            }
-        }
-
-        .icon {
-            width: 42px;
-            height: 42px;
+header {
+    .diagonal {
+        &::after {
+            content: '';
+            border-top: 6px solid $primary-dark;
+            border-bottom: 2px solid $primary;
+            background: #404E5D;
+            transform: skewY(-45deg);
+            position: absolute;
+            top: 0;
+            width: 62px;
+            height: 27px;
+            left: 0;
+            width: 93px;
+            height: 21px;
         }
     }
+    h2.title {
+        font-size: 5em;
+        word-wrap: word-break;
+        line-height: 90%;
+        &::after {
+            content: '';
+            border-top: 6px solid $primary-dark;
+            border-bottom: 2px solid $primary;
+            transform: skewY(-45deg);
+            position: absolute;
+            top: 0;
+            width: 62px;
+            height: 27px;
+            left: 0;
+            width: 93px;
+            height: 21px;
+        }
+    }
+    .icon {
+        max-height: 120px;
+    }
+    .lead {
+        line-height: 1.5;
+        letter-spacing: .2em;
+        font-size: 1rem;
+        padding-top: 2em;
+    }
 }
-
 /*=====  End of CONTENT SECCION  ======*/
+
+/*===============================
+=            SLIDERS            =
+===============================*/
+.slide {
+    padding: 3em 0;
+
+}
+.fp-slidesNav {
+    left: 50% !important;
+    color: $primary;
+    background-color: $secondary;
+    right: auto;
+    max-width: 120px;
+    border-radius: 3em;
+    ul li {
+        vertical-align: middle;
+    }
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: $primary;
+}
+.iScrollVerticalScrollbar {
+    width: 8px;
+    right: 4px;
+}
+/*=====  End of SLIDERS  ======*/
+
+
 
 /*==============================
 =            FOOTER            =
@@ -443,16 +470,25 @@ section {
 footer {
     color: $secondary-dark;
 }
-
-
 /*=====  End of FOOTER  ======*/
+
 /*----------  MISC  ----------*/
 .sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
-
+.divider {
+    border-bottom: 1px solid $secondary-dark;
+    position: relative;
+    padding-bottom: -20px;
+    .icon {
+        background-color: $secondary-light;
+        color: $secondary-light;
+        box-sizing: content-box;
+        top: 12px;
+    }
+}
 .skew {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
@@ -483,7 +519,6 @@ footer {
     border-top-color: $secondary !important;
 }
 
-/*----------  Efecto   ----------*/
 .foto-bj {
     filter: url(filters.svg#grayscale);
     filter: gray;
@@ -499,28 +534,91 @@ footer {
     }
 }
 
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+}
 
+/*----------  Icon Scroll  ----------*/
 
+.icon-scroll {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 24px;
+  height: 42px;
+  margin-left: -20px;
+  box-shadow: inset 0 0 0 1px $primary;
+  border-radius: 25px;
+  &:before {
+      position: absolute;
+      left: 50%;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: $primary;
+      margin-left: -2px;
+      top: 8px;
+      border-radius: 4px;
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: scroll;
+      animation-name: scroll;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    -webkit-transform: translateY(24px);
+    transform: translateY(24px);
+}
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    -webkit-transform: translateY(24px);
+    transform: translateY(24px);
+}
+}
+
+.effect.hover-skew.active {
+    color: $secondary;
+    &:after {
+      margin-left: -50%;
+      width: 100%;
+  }
+}
 .effect {
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-perspective: 400;
-  -moz-perspective: 400;
-  -ms-perspective: 400;
-  -o-perspective: 400;
-  perspective: 400;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 1em;
-  backface-visibility: hidden;
-  &:before, &:after {
+    font-family: $font-family-serif;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-perspective: 400;
+    -moz-perspective: 400;
+    -ms-perspective: 400;
+    -o-perspective: 400;
+    perspective: 400;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1em;
+    backface-visibility: hidden;
+
+    &:before, &:after {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
       opacity: 0;
       -webkit-transform-origin: center center 0 50%;
@@ -539,9 +637,11 @@ footer {
       left: 0;
       border-radius: 4px;
   }
+
   &.hover-skew {
       padding: 6px 10px;
       overflow: hidden;
+
       &:after {
         opacity: 1;
         top: 0;

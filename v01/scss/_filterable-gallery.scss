@@ -20,15 +20,15 @@
     font-size: 0.85em;
     letter-spacing: 1px;
     
-    &.effect.hover-skew::after {
+    /* &.effect.hover-skew::after {
       color: $primary;
       background: $secondary;
-    }
+    } 
     &:hover, &.active {
       color: $primary !important;
       background-color: $secondary !important;
     }
-    /* &:after {
+     &:after {
      position: absolute;
      content: '';
      top: 0;
@@ -45,8 +45,8 @@
      -webkit-transition: all 0.17s ease-in-out;
      -o-transition: all 0.17s ease-in-out;
 
-   } */
-  /*  &.active:after {
+   } 
+   &.active:after {
     width: 100%;
     left: 0;
   } */

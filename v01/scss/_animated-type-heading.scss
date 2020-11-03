@@ -93,6 +93,11 @@ h2.cd-headline {
   .cd-words-wrapper {
     font-size: 80%;
   }
+  h2.cd-headline {
+    font-size: 300%;
+    letter-spacing: 0;
+    text-shadow: 0 2px 10px $secondary-dark;
+  }
 }
 
 /*----------  MD  ----------*/

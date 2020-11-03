@@ -43,29 +43,46 @@ $(document).ready(function(){
     .mouseenter( function(){ var elem = $(this); elem.addClass('animated ' + elem.attr('data-bs-hover-animate')) })
     .mouseleave( function(){ var elem = $(this); elem.removeClass('animated ' + elem.attr('data-bs-hover-animate')) });
 
+    // Cambiar la opacidad de la imagen  al scrollar
+    /*$(window).scroll(function(){ 
+        $('.bg-foto').css("opacity", .5- $(window).scrollTop() / 700) 
+    }) */
+
     //Plugin Fullpage.js
     var myFullpage = new fullpage('#fullpage', {
-            // ──────────────────────────────────────────────────
-            //   :::::: Opciones Basicas
-            // ──────────────────────────────────────────────────
-            autoScrolling: false, // Desactivo el auto scroll.
-            fitToSection: false, // Desactivo el scroll automaticamente para que la seccion se muestre en pantalla.
+            // DESPLAZAMIENTO
+            autoScrolling: true, // Determina si usar desplazamiento "automático" o "a saltos" o usar el desplazamiento tradicional de cualquier página.
+            scrollHorizontally: true, // Determina si las diapositivas horizontales volverán a la primera o última diapositiva al llegar a la última o primera respectivamente.
+            fitToSection: false, // Determina si "encajar" las secciones en el navegador o no.
             css3: true, // Usar CSS3 y no javascript.
-            easingcss3: 'ease-out', // Curva de velocidad del efecto.
-            scrollOverflow: true,
-            scrollBar: false,
-            slidesNavigation: false,
+            easingcss3: 'easeInOutCubic', // Curva de velocidad del efecto.
+            scrollBar: true, //Determina si se utiliza la barra de desplazamiento del navegador o no para las secciones verticales. 
+            scrollOverflow: true, // Crear o no una barra de desplazamiento para las secciones/diapositivas es mayor que la altura de la ventana del navegador. 
+            normalScrollElements: '#scroll-timeline',// Evitar el auto desplazamiento al hacer scroll encima de ciertos elementos, ésta es la opción a usar. (Útil para mapas, divs con scroll etc.). 
             fitToSectionDelay: 1000, // Delay antes de acomodar la seccion automaticamente.
-            verticalCentered: false, // No se alinearan vertical los contenidos de cada seccion.
-            normalScrollElements: '#estudios, #experiencia',
-            // ──────────────────────────────────────────────────
-            //   :::::: Navegación
-            // ──────────────────────────────────────────────────
-            // anchors: ['section1'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
-            // lockAnchors: true,
 
+            // NAVEGACION
             menu: '#menu-ppal', // Menu de navegación.
+            lockAnchors: false,
+            anchors: ['page1', 'page2', 'page3', 'page4'], // Anclas, las usamos para identificar cada seccion y poder acceder a ellas con el menu.
+            nnavigation: false, // Oculta o muestra la navegacion de puntos.
+            navigationPosition: 'right',
+            navigationTooltips: ['Inicio', 'Portfolio', 'Sobre Mi', 'Servicios'],
+            showActiveTooltip: false,
+            slidesNavigation: true,
+            slidesNavPosition: 'top',
+
+            // ACCESIBILIDAD
             keyboardScrolling: true, //Navega con las flechas
+            animateAnchor: true,
+            recordHistory: true,
+
+            // DISEÑO
+            verticalCentered: false, // No se alinearan vertical los contenidos de cada seccion.
+            paddingBottom: '10em', // Determina el "padding" inferior para cada sección.
+            //fixedElements: '.bg-foto', // elemento/s serán extraídos de la estructura de fullPage.js. 
+
+            
         });
 
     //Tooltip
@@ -73,15 +90,15 @@ $(document).ready(function(){
     	$('[data-toggle="tooltip"]').tooltip()
     });
 
+    //Lightbox de Portfolio
+    $('.gallery a').simpleLightbox({
+    	overlay: true,
+    });
+    
     //Oculta el Sidebar despues de hacer click en algun item.
     $('a.nav-link').click(function(){
     	$('.off-canvas').attr('data-open-drawer','0').removeClass('open');
 
-    });
-
-    //Lightbox de Portfolio
-    $('.gallery a').simpleLightbox({
-    	overlay: true,
     });
 });
 
