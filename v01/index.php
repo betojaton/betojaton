@@ -4,9 +4,9 @@
 <!--=============================
 =            PRELOAD            =
 ==============================-->
-<div id="preload" class="position-fixed w-100 h-100 bg-primary">
-    <div id="porcentajeCarga" class="position-absolute text-center text-secondary w-100 small">0%</div>
-    <div id="lineaCarga" class="position-absolute w-100 bg-dark">
+<div id="preload" class="position-fixed w-100 h-100 bg-secondary">
+    <div id="porcentajeCarga" class="position-absolute text-center text-primary w-100 small">0%</div>
+    <div id="lineaCarga" class="position-absolute w-100 bg-primary">
         <div id="rellenoCarga" class="position-absolute "></div>
     </div>
     <div id="estadoCarga" class="position-absolute"></div>

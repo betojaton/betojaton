@@ -174,7 +174,7 @@ article {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        width: 50px;
+        width: 180px;
         height: 50px;
     }
 }
@@ -661,6 +661,8 @@ footer {
     }
     &:hover {
       color: $secondary;
+      background-color: transparent;
+      border: none;
       &:after {
           margin-left: -50%;
           width: 100%;

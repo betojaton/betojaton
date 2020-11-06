@@ -14,7 +14,7 @@
         =            GALLERY PORTFOLIO            =
         ========================================-->
         <div class="col-12 pl-md-5">
-        	<div class="filtr-controls btn-group nav-filter mb-3 w-100 mx-auto d-sm-inline-flex" role="navigation">
+        	<div class="filtr-controls btn-group nav-filter mb-3 w-100 mx-auto d-sm-block" role="navigation">
         		<span class="nav-item effect hover-skew active" data-filter="all">Todos</span>
         		<span class="nav-item effect hover-skew " data-filter="1">Diseño Gráfico</span>
         		<span class="nav-item effect hover-skew" data-filter="2">Diseño Web</span>

@@ -16,14 +16,14 @@
     color: $primary-light;
     font-size: inherit;
 
-    &::before {
+ /*    &::before {
       content: '|';
       color: $primary-light;
       margin-right: 2px;
       font-size: inherit;
       font-weight: 100;
       top: -1px;
-    }
+    } */
     &.is-visible {
       position: relative;
     }

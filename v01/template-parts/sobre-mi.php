@@ -17,7 +17,7 @@
 
     <div class="float-left w-25 mr-md-5">
       <img src="img/foto-betojaton.png" alt="Foto Personal" class="rounded-circle foto-bj img-fluid bg-dark">
-      <a class="btn btn-xs btn-outline-primary my-3 small" role="button" title="Descargar Curriculum Vitae" href="img/cv_robertojaton-2020.pdf"><i class="fas fa-file-download mr-2"></i>Descargar CVitae (<em>58 <abbr title="Kilobytes">kb.</abbr></em>)</a>
+      <a class="btn btn-xs btn-primary my-3 effect hover-skew" role="button" title="Descargar Curriculum Vitae" href="img/cv_robertojaton-2020.pdf" style="font-size: 0.75rem"><i class="fas fa-file-download mr-2"></i>Descargar CVitae <span class="small">(58 <abbr title="Kilobytes">Kb.</abbr>)</span></a>
     </div>
 
     <p class="mt-0"><strong>Mi nombre es Roberto</strong> y he tenido la oportunidad de trabajar para pequeñas y grandes empresas, instituciones, ONG, diarios, etc.</p>
@@ -191,7 +191,7 @@
 <div class="slide rounded " id="habilidades" data-anchor="slide1-3">
   <div class="row" id="habilidades">
    <h3 class="mt-5 mb-3 pt-3 w-100 text-center">Algunas Habilidades...</h3>
-   <div class="col-md-7 pr-md-5">
+   <div class="col-md-4 ml-md-auto">
         <!--======================================
         =            SKILLS DISEÑADOR            =
         =======================================-->
@@ -205,31 +205,31 @@
           <h3 class="border-bottom border-secondary">Diseñador</h3>
         </div>
       </header>  
-
-
       <div class="progress mb-2">
-        <div class="progress-bar  text-primary text-center" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">PHOTOSHOP</div>
+        <div class="progress-bar text-light text-center" role="progressbar" style="width: 90%; background-color:#31A8FF" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">PHOTOSHOP</div>
       </div>
 
       <div class="progress mb-2">
-        <div class="progress-bar  text-primary text-center" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">ILLUSTRATOR</div>
+        <div class="progress-bar  text-light text-center" role="progressbar" style="width: 90%; background-color:#F15D24" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">ILLUSTRATOR</div>
       </div>
 
       <div class="progress mb-2">
-        <div class="progress-bar text-primary text-center" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">COREL DRAW</div>
+        <div class="progress-bar text-light text-center" role="progressbar" style="width: 100%; background-color:#478E86" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">COREL DRAW</div>
       </div>
       <div class="progress mb-2">
-        <div class="progress-bar text-primary text-center" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">AFINITTY DESIGNER</div>
+        <div class="progress-bar text-light text-center" role="progressbar" style="width: 70%; background-color:#50CEFB" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">AFINITTY DESIGNER</div>
       </div>
       <div class="progress mb-2">
-        <div class="progress-bar text-primary text-center" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">SUBLIME TEXT</div>
+        <div class="progress-bar text-light text-center" role="progressbar" style="width: 70%; background-color:#FF9700" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">SUBLIME TEXT</div>
       </div>   
       <div class="progress mb-2">
-        <div class="progress-bar text-primary text-center" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">FIGMA</div>
+        <div class="progress-bar text-light text-center" role="progressbar" style="width: 50%; background-color:#9C5DF3" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">FIGMA</div>
+      </div><div class="progress mb-2">
+        <div class="progress-bar text-light text-center" role="progressbar" style="width: 50%; background-color:#FF3366" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">INVISION</div>
       </div>
       <!--====  End of SKILLS DISEÑADOR  ====-->
     </div>
-    <div class="col-md-5">
+    <div class="col-md-4 mr-md-auto">
     <!--=====================================
     =            SKILL FRONT-END            =
     ======================================--> 
@@ -258,7 +258,6 @@
   </div>
 </div>
 <!--====  End of SKILL FRONT-END   ====-->
-</div>
 </div><!--/row-->
 </div>
 <!--====  End of SLIDE: HABILIDADES  ====-->
