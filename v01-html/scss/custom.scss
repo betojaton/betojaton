@@ -1,0 +1,674 @@
+//Theme Custom
+/* Colores*/
+$primary: #2AD1C9;
+$primary-light:#70FFFC;
+$primary-dark:#009F98;
+$secondary: #192734;
+$secondary-light: #404E5D;
+$secondary-dark: #00000C;
+$success: #FF8E33;
+$success-light: #FFE3CC;
+$success-dark: #940;
+
+$body-bg: $secondary-light;
+
+
+/*Fuentes*/
+$font-family-sans-serif: 'Roboto',
+Arial,
+sans-serif;
+$font-family-serif: 'Roboto Slab',
+Times,
+serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;
+$headings-color: $primary;
+
+
+/*==============================
+=     IMPORTS  .scss
+Portfolio: filterable-gallery 
+SobreMi: skill-bars, time-line, testimonial-slider 
+Servicios: features-boxed
+Blog: -      
+=
+===============================*/
+@import "../bootstrap/scss/bootstrap";
+@import 'liquid-slider', 'bg-animated', 'off-canvas-sidebar-drawer-navbar', 'animated-type-heading', 'skill-bars', 'time-line', 'testimonial-slider', 'features-boxed', 'filterable-gallery', 'media-queries';
+/*=====  End of IMPORTS  ======*/
+
+/*RESET*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+p {
+    line-height: calc(1ex / 0.32); //altura de línea óptima para las fuentes serif y sans-serif
+    margin: calc(1ex / 0.32) 0;
+    width: 60ch; //ajusta a 60 caracteres por línea
+    max-width: 100%;
+    font-size: 1.2em;
+}
+
+p[lang=”es”] {
+    text-align: justify;
+    hyphens: auto;
+}
+
+/*----------  Modular Fonts  ----------*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 2.75rem 0 1.05rem;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.488em;
+}
+
+h2 {
+    font-size: 2.074em;
+}
+
+h3 {
+    font-size: 1.728em;
+}
+
+h4 {
+    font-size: 1.44em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+small,
+.text_small {
+    font-size: 0.833em;
+}
+
+/*----------  /Modular Fonts  ----------*/
+
+body {
+    background-color: $secondary-light;
+    font-family: $font-family-sans-serif;
+    color: $success-light;
+    line-height: 160%;
+    font-weight: 300;
+}
+
+article {
+    h1 {
+        line-height: calc(1ex / 0.42);
+        margin: calc(1ex / 0.42) 0;
+    }
+
+    h2 {
+        line-height: calc(1ex / 0.42);
+        margin: calc(1ex / 0.42) 0;
+    }
+
+    h3 {
+        line-height: calc(1ex / 0.38);
+        margin: calc(1ex / 0.38) 0;
+    }
+}
+
+.bg-secondary-light {
+    background-color: $secondary-light;
+}
+
+.btn {
+    font-family: $font-family-serif;
+    font-weight: 400;
+}
+
+.card {
+    background-color: $secondary-light;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+/*===============================
+=            PRELOAD            =
+===============================*/
+#preload {
+    z-index: 9999;
+    top: 0;
+
+    #porcentajeCarga {
+        top: 52%;
+    }
+
+    #lineaCarga {
+        height: 2px;
+        top: 50%;
+        left: 0%;
+
+        #rellenoCarga {
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+        }
+    }
+
+    #estadoCarga {
+        background: url(../img/loader.gif);
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 180px;
+        height: 50px;
+    }
+}
+
+/*=====  End of PRELOAD  ======*/
+
+
+/*===============================
+=            SIDEBAR            =
+===============================*/
+
+/*----  NAVBAR PPAL  ----------*/
+.navbar-ppal {
+    height: 100vh;
+    top: 144px;
+    position: absolute;
+    a.nav-link {
+        color: $primary;
+        font-family: $font-family-serif;
+        position: relative;
+        margin: 5px 0 ;
+
+        &:hover,
+        &.ls-current {
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            margin-left: 10px;
+            color: $secondary-light;
+        }
+        .icon {
+            max-width: 24px;
+            max-height: 24px;
+            /* background-color: $secondary; */
+        }
+    }
+
+    .navbar-nav {
+        a {
+            color: $secondary-light;
+        }
+    }
+
+    .nav-tabs .nav-link.active {
+        color: $primary;
+        font-family: $font-family-serif;
+        background-color: transparent;
+        border-bottom: 2px solid $secondary-light;
+    }
+
+    .navbar-social {
+        i {
+            font-size: 24px;
+        }
+    }
+}
+
+/*----  /NAVBAR PPAL  ----------*/
+
+.navbar.off-canvas {
+    z-index: 999;
+}
+
+.off-canvas {
+    .btn-close {
+        height: 38px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+
+        .icon {
+            color: $secondary;
+        }
+    }
+
+    .navbar-brand {
+        position: absolute;
+        background-image: url("../img/logo-betojaton.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        width: 32px;
+        height: 32px;
+        top: 60px;
+        transition: all 300ms;
+
+        &:hover {
+            width: 104px;
+        }
+    }
+
+    &.open {
+        .navbar-brand {
+            width: 104px;
+            left: 30px;
+        }
+    }
+    .bg-skew {
+        background-color: $secondary;
+        position: absolute;
+        z-index: -9;
+        width: 100%;
+        height: 100%;
+        left: -10px;
+        
+    }
+}
+
+footer {
+    color: $primary;
+    background-color: $secondary-light;
+}
+
+/*=====  End of SIDEBAR  ======*/
+/*================================
+=            Class FULLPAGE           =
+================================*/
+#fullpage {
+    background-image: url("../img/bg-foto-icons02.webp");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .fp-controlArrow {
+        z-index: 99;
+        color: $secondary-dark;
+        background-color: rgba($secondary, .1);
+        border-radius: 100px;
+        transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+
+        &:hover {
+            background-color: rgba($secondary, .8);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px !important;
+            width: 24px;
+            height: 24px;
+            display: block;
+            border-width: 3px 3px 0 0;
+            border-style: solid;
+            border-color: #fff;
+            transform: rotate(45deg);
+        }
+
+        &.fp-prev {
+            left: 3%;
+
+            &::before {
+                transform: rotate(-135deg);
+                left: 10px;
+            }
+        }
+
+        &.fp-next {
+            right: 3%;
+
+            &::before {
+                right: 10px;
+            }
+        }
+
+        &.fp-prev,
+        &.fp-next {
+            border-color: transparent !important;
+        }
+    }
+}
+
+/*----------  Deshabilito el alto de las secciones  ----------*/
+@media (max-width: 640px) {
+    .fp-tableCell,
+    .fp-section,
+    .fp-slides {
+        height: auto !important;
+    }
+    .fp-slides {
+        overflow: visible !important;
+    }
+}
+
+/*=====  End of Clases FULLPAGE  ======*/
+
+
+/*=========================================
+=            CONTENT SECTIONS         =
+=========================================*/
+section {
+    background-color: rgba($secondary-light, 0.8);
+}
+
+/*----------  INICIO  ----------*/
+.inicio {
+    overflow: hidden;
+    background-color: transparent;
+    height: 100vh;
+    .more-about {
+        position: absolute;
+        top: 80%;
+        color: $primary;
+        font-family: $font-family-sans-serif;
+
+        a:hover {
+            color: $primary;
+            background-color: $secondary;
+        }
+    }
+
+}
+
+header {
+    .diagonal {
+        &::after {
+            content: '';
+            border-top: 6px solid $primary-dark;
+            border-bottom: 2px solid $primary;
+            background: #404E5D;
+            transform: skewY(-45deg);
+            position: absolute;
+            top: 0;
+            width: 62px;
+            height: 27px;
+            left: 0;
+            width: 93px;
+            height: 21px;
+        }
+    }
+    h2.title {
+        font-size: 5em;
+        word-wrap: word-break;
+        line-height: 90%;
+        &::after {
+            content: '';
+            border-top: 6px solid $primary-dark;
+            border-bottom: 2px solid $primary;
+            transform: skewY(-45deg);
+            position: absolute;
+            top: 0;
+            width: 62px;
+            height: 27px;
+            left: 0;
+            width: 93px;
+            height: 21px;
+        }
+    }
+    .icon {
+        max-height: 120px;
+    }
+    .lead {
+        line-height: 1.5;
+        letter-spacing: .2em;
+        font-size: 1rem;
+        padding-top: 2em;
+    }
+}
+/*=====  End of CONTENT SECCION  ======*/
+
+/*===============================
+=            SLIDERS            =
+===============================*/
+.slide {
+    padding: 3em 0;
+
+}
+.fp-slidesNav {
+    left: 50% !important;
+    color: $primary;
+    background-color: $secondary;
+    right: auto;
+    max-width: 120px;
+    border-radius: 3em;
+    ul li {
+        vertical-align: middle;
+    }
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: $primary;
+}
+.iScrollVerticalScrollbar {
+    width: 8px;
+    right: 4px;
+}
+/*=====  End of SLIDERS  ======*/
+
+
+
+/*==============================
+=            FOOTER            =
+==============================*/
+footer {
+    color: $secondary-dark;
+}
+/*=====  End of FOOTER  ======*/
+
+/*----------  MISC  ----------*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.divider {
+    border-bottom: 1px solid $secondary-dark;
+    position: relative;
+    padding-bottom: -20px;
+    .icon {
+        background-color: $secondary-light;
+        color: $secondary-light;
+        box-sizing: content-box;
+        top: 12px;
+    }
+}
+.skew {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.border-top-left {
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.tooltip-inner {
+    background: $secondary;
+    font-size: 12px;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: $secondary !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: $secondary !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: $secondary !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: $secondary !important;
+}
+
+.foto-bj {
+    filter: url(filters.svg#grayscale);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+    -moz-transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+    -o-transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+    transition: all .4s cubic-bezier(0.645, .045, .355, 1) 0s;
+
+    &:hover {
+        filter: none;
+        -webkit-filter: none;
+    }
+}
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+}
+
+/*----------  Icon Scroll  ----------*/
+
+.icon-scroll {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 24px;
+  height: 42px;
+  margin-left: -20px;
+  box-shadow: inset 0 0 0 1px $primary;
+  border-radius: 25px;
+  &:before {
+      position: absolute;
+      left: 50%;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: $primary;
+      margin-left: -2px;
+      top: 8px;
+      border-radius: 4px;
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: scroll;
+      animation-name: scroll;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    -webkit-transform: translateY(24px);
+    transform: translateY(24px);
+}
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    -webkit-transform: translateY(24px);
+    transform: translateY(24px);
+}
+}
+
+.effect.hover-skew.active {
+    color: $secondary;
+    &:after {
+      margin-left: -50%;
+      width: 100%;
+  }
+}
+.effect {
+    font-family: $font-family-serif;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-perspective: 400;
+    -moz-perspective: 400;
+    -ms-perspective: 400;
+    -o-perspective: 400;
+    perspective: 400;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1em;
+    backface-visibility: hidden;
+
+    &:before, &:after {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0;
+      -webkit-transform-origin: center center 0 50%;
+      -moz-transform-origin: center center 0 50%;
+      -ms-transform-origin: center center 0 50%;
+      -o-transform-origin: center center 0 50%;
+      transform-origin: center center 0 50%;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      position: absolute;
+      content: attr(data-effect);
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+  }
+
+  &.hover-skew {
+      padding: 6px 10px;
+      overflow: hidden;
+
+      &:after {
+        opacity: 1;
+        top: 0;
+        left: 50%;
+        margin-left: 0%;
+        bottom: 0;
+        width: 0%;
+        color: $secondary;
+        background: $primary;
+        z-index: -1;
+        -webkit-transform: skewX(-45deg);
+        -moz-transform: skewX(-45deg);
+        -ms-transform: skewX(-45deg);
+        -o-transform: skewX(-45deg);
+        transform: skewX(-45deg);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    }
+    &:hover {
+      color: $secondary;
+      background-color: transparent;
+      border: none;
+      &:after {
+          margin-left: -50%;
+          width: 100%;
+      }
+  }
+}
+}
+
+/*----------  /Efecto   ----------*/
